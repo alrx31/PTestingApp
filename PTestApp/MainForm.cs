@@ -12,9 +12,6 @@ namespace PTestApp
         private void Form1_Load(object sender, EventArgs e)
         {
             var tests = ReadTests();
-            // view list of tests names
-
-            
 
             foreach (var test in tests)
             {
@@ -37,11 +34,11 @@ namespace PTestApp
 
         private List<Test> ReadTests()
         {
-            // read tests from add json file in Data directory
             var list = new List<Test>();
-            string folderPath = "..\\..\\..\\Data"; // Укажите здесь путь к папке "data"
 
-            // Получение всех файлов с расширением .json в папке
+            // string folderPath = "Data";
+            string folderPath = "..\\..\\..\\Data"; 
+
             string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
 
             foreach (string jsonFile in jsonFiles)

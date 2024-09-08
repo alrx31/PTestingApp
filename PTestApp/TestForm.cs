@@ -65,7 +65,6 @@ namespace PTestApp
                 label.Text = answ;
                 label.AutoSize = true;
                 var number = answs.IndexOf(answ);
-                // create delegate for click event
                 EventHandler clickdelegate = (s, ev) =>
                 {
                     res += test.AnswerCost[number];
