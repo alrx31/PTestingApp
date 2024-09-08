@@ -39,7 +39,7 @@ namespace PTestApp
         {
             // read tests from add json file in Data directory
             var list = new List<Test>();
-            string folderPath = "Data"; // Укажите здесь путь к папке "data"
+            string folderPath = "..\\..\\..\\Data"; // Укажите здесь путь к папке "data"
 
             // Получение всех файлов с расширением .json в папке
             string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
