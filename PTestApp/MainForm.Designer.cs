@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            backButton = new Button();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -38,11 +39,23 @@
             flowLayoutPanel1.Size = new Size(772, 428);
             flowLayoutPanel1.TabIndex = 0;
             // 
+            // backButton
+            // 
+            backButton.Location = new Point(713, 405);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(75, 23);
+            backButton.TabIndex = 0;
+            backButton.Text = "Назад";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Visible = false;
+            backButton.Click += backButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(backButton);
             Controls.Add(flowLayoutPanel1);
             Name = "MainForm";
             Text = "Психологические тесты";
@@ -53,5 +66,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button backButton;
     }
 }
