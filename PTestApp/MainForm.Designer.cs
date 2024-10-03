@@ -34,6 +34,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Font = new Font("Segoe UI", 9F);
             flowLayoutPanel1.Location = new Point(16, 10);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(772, 428);
@@ -57,6 +58,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(backButton);
             Controls.Add(flowLayoutPanel1);
+            Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Name = "MainForm";
             Text = "Психологические тесты";
             Load += Form1_Load;

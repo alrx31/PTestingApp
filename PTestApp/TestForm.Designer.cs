@@ -35,11 +35,11 @@
             // 
             // QuestionLabel
             // 
-            QuestionLabel.AutoSize = true;
-            QuestionLabel.Font = new Font("Segoe UI", 14F);
-            QuestionLabel.Location = new Point(339, 9);
+            QuestionLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            QuestionLabel.ForeColor = SystemColors.ActiveCaptionText;
+            QuestionLabel.Location = new Point(24, 9);
             QuestionLabel.Name = "QuestionLabel";
-            QuestionLabel.Size = new Size(63, 25);
+            QuestionLabel.Size = new Size(764, 93);
             QuestionLabel.TabIndex = 0;
             QuestionLabel.Text = "label1";
             // 
@@ -67,11 +67,11 @@
             Controls.Add(flowLayoutPanel1);
             Controls.Add(NextButton);
             Controls.Add(QuestionLabel);
+            Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             Name = "TestForm";
             Text = "TestForm";
             Load += TestForm_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

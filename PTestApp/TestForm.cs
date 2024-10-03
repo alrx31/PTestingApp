@@ -21,6 +21,8 @@ namespace PTestApp
         {
             InitializeComponent();
             this.test = test;
+            this.BackColor = Color.Aqua;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void TestForm_Load(object sender, EventArgs e)
@@ -33,6 +35,7 @@ namespace PTestApp
         private void NextButton_Click(object? sender, EventArgs e)
         {
             UpdateQuestion();
+            NextButton.Enabled = false;
         }
 
         private void UpdateQuestion()
@@ -57,13 +60,16 @@ namespace PTestApp
             foreach (var answ in answs)
             {
                 var opt = new Panel();
-                opt.Size = new Size(200, 50);
+                opt.Size = new Size(700, 50);
                 opt.BackColor = Color.White;
                 opt.BorderStyle = BorderStyle.FixedSingle;
                 opt.Margin = new Padding(5);
                 var label = new Label();
                 label.Text = answ;
                 label.AutoSize = true;
+                label.AutoSize = false;
+                label.Size = new Size(700, 50);
+
                 var number = answs.IndexOf(answ);
                 EventHandler clickdelegate = (s, ev) =>
                 {
@@ -72,6 +78,9 @@ namespace PTestApp
                 };
                 opt.Click += clickdelegate;
                 label.Click += clickdelegate;
+
+                label.Cursor = Cursors.Hand;
+                opt.Cursor = Cursors.Hand;
                 opt.Controls.Add(label);
                 flowLayoutPanel1.Controls.Add(opt);
             }
@@ -85,13 +94,15 @@ namespace PTestApp
             flowLayoutPanel1.Controls.Clear();
 
             var panel = new Panel();
-            panel.Size = new Size(500,500);
+            panel.Size = new Size(500,200);
             panel.AutoSize = true;
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(10);
+            panel.BackColor = Color.White;
             var label = new Label();
             label.Text = GetResult();
-            label.AutoSize = true;
+            label.AutoSize = false;
+            label.Size = new Size(500, 200);
             panel.Controls.Add(label);
             flowLayoutPanel1.Controls.Add(panel);
             NextButton.Click -= NextButton_Click;

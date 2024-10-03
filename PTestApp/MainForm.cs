@@ -26,8 +26,8 @@ namespace PTestApp
 
             ChoiseTestTheme();
 
-
-
+            this.BackColor = Color.Aqua;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
 
@@ -41,12 +41,19 @@ namespace PTestApp
                 panel.Size = new Size(200, 50);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
+                panel.BackColor = Color.White;
+
                 var label = new Label() { Text = $"{themes[index]}" };
                 label.Click += (s, ev) =>
                 {
                     var tests = ReadTests(index);
                     FillTests(tests);
                 };
+                label.AutoSize = false;
+                label.Size = new Size(200, 50);
+                label.Cursor = Cursors.Hand;
+                panel.Cursor = Cursors.Hand;
+
                 panel.Controls.Add(label);
                 panel.Click += (s, ev) =>
                 {
@@ -86,12 +93,27 @@ namespace PTestApp
                 panel.Size = new Size(200, 50);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
-                panel.Controls.Add(new Label() { Text = test.Name });
+                panel.BackColor = Color.White;
+                var label = new Label() { Text = test.Name };
+                label.AutoSize = false;
+                label.Size = new Size(200, 50);
+
+                label.Click += (s, ev) =>
+                {
+                    var testForm = new TestForm(test);
+                    testForm.ShowDialog();
+                };
+
+                panel.Controls.Add(label);
+                
                 panel.Click += (s, ev) =>
                 {
                     var testForm = new TestForm(test);
                     testForm.ShowDialog();
                 };
+
+                label.Cursor = Cursors.Hand;
+                panel.Cursor = Cursors.Hand;
 
                 flowLayoutPanel1.Controls.Add(panel);
             }
