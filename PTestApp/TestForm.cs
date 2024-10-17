@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using System.Windows.Forms;
-
-namespace PTestApp
+﻿namespace PTestApp
 {
     public partial class TestForm : Form
     {
@@ -21,7 +10,7 @@ namespace PTestApp
         {
             InitializeComponent();
             this.test = test;
-            this.BackColor = Color.Aqua;
+            this.BackColor = Color.AliceBlue;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
@@ -64,6 +53,7 @@ namespace PTestApp
                 opt.BackColor = Color.White;
                 opt.BorderStyle = BorderStyle.FixedSingle;
                 opt.Margin = new Padding(5);
+                opt.BorderStyle = BorderStyle.FixedSingle;
                 var label = new Label();
                 label.Text = answ;
                 label.AutoSize = true;
@@ -99,6 +89,8 @@ namespace PTestApp
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(10);
             panel.BackColor = Color.White;
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Padding = new Padding(10);
             var label = new Label();
             label.Text = GetResult();
             label.AutoSize = false;

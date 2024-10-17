@@ -26,7 +26,7 @@ namespace PTestApp
 
             ChoiseTestTheme();
 
-            this.BackColor = Color.Aqua;
+            this.BackColor = Color.AliceBlue;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
@@ -41,7 +41,9 @@ namespace PTestApp
                 panel.Size = new Size(200, 50);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
+                panel.Padding = new Padding(10);
                 panel.BackColor = Color.White;
+                panel.BorderStyle = BorderStyle.FixedSingle;
 
                 var label = new Label() { Text = $"{themes[index]}" };
                 label.Click += (s, ev) =>
@@ -94,6 +96,7 @@ namespace PTestApp
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
                 panel.BackColor = Color.White;
+                panel.BorderStyle = BorderStyle.FixedSingle;
                 var label = new Label() { Text = test.Name };
                 label.AutoSize = false;
                 label.Size = new Size(200, 50);
