@@ -26,7 +26,7 @@ namespace PTestApp
 
             ChoiseTestTheme();
 
-            this.BackColor = Color.AliceBlue;
+            this.BackColor = Color.Beige;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
@@ -38,21 +38,25 @@ namespace PTestApp
             {
                 var index = i;
                 var panel = new Panel();
-                panel.Size = new Size(200, 50);
+                panel.Size = new Size(300, 100);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
                 panel.Padding = new Padding(10);
                 panel.BackColor = Color.White;
                 panel.BorderStyle = BorderStyle.FixedSingle;
-
+                panel.BackColor = Color.Aquamarine;
                 var label = new Label() { Text = $"{themes[index]}" };
+                
                 label.Click += (s, ev) =>
                 {
                     var tests = ReadTests(index);
                     FillTests(tests);
                 };
+                label.Font = new Font("Roboto",16);
                 label.AutoSize = false;
-                label.Size = new Size(200, 50);
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Size = new Size(300, 100);
+
                 label.Cursor = Cursors.Hand;
                 panel.Cursor = Cursors.Hand;
 
@@ -92,15 +96,17 @@ namespace PTestApp
             foreach (var test in tests)
             {
                 var panel = new Panel();
-                panel.Size = new Size(200, 50);
+                panel.Size = new Size(300, 150);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
                 panel.BackColor = Color.White;
                 panel.BorderStyle = BorderStyle.FixedSingle;
+                panel.BackColor = Color.Aquamarine;
                 var label = new Label() { Text = test.Name };
                 label.AutoSize = false;
-                label.Size = new Size(200, 50);
-
+                label.Size = new Size(300, 150);
+                label.Font = new Font("Roboto", 16);
+                label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Click += (s, ev) =>
                 {
                     var testForm = new TestForm(test);

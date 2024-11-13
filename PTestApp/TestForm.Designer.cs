@@ -49,7 +49,7 @@
             NextButton.Name = "NextButton";
             NextButton.Size = new Size(284, 38);
             NextButton.TabIndex = 1;
-            NextButton.Text = "Next";
+            NextButton.Text = "Далее";
             NextButton.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
@@ -61,7 +61,7 @@
             // 
             // TestForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(flowLayoutPanel1);

@@ -10,7 +10,7 @@
         {
             InitializeComponent();
             this.test = test;
-            this.BackColor = Color.AliceBlue;
+            this.BackColor = Color.Beige;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
@@ -49,16 +49,19 @@
             foreach (var answ in answs)
             {
                 var opt = new Panel();
-                opt.Size = new Size(700, 50);
+                opt.Size = new Size(700, 70);
                 opt.BackColor = Color.White;
                 opt.BorderStyle = BorderStyle.FixedSingle;
                 opt.Margin = new Padding(5);
                 opt.BorderStyle = BorderStyle.FixedSingle;
+                opt.BackColor = Color.Aquamarine;
                 var label = new Label();
                 label.Text = answ;
                 label.AutoSize = true;
                 label.AutoSize = false;
-                label.Size = new Size(700, 50);
+                label.Size = new Size(700, 70);
+
+                label.Font = new Font("Roboto", 14);
 
                 var number = answs.IndexOf(answ);
                 EventHandler clickdelegate = (s, ev) =>
@@ -84,7 +87,7 @@
             flowLayoutPanel1.Controls.Clear();
 
             var panel = new Panel();
-            panel.Size = new Size(500,200);
+            panel.Size = new Size(800,200);
             panel.AutoSize = true;
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(10);
@@ -94,8 +97,11 @@
             var label = new Label();
             label.Text = GetResult();
             label.AutoSize = false;
-            label.Size = new Size(500, 200);
+            label.Size = new Size(800, 200);
+            label.Font = new Font("Roboto", 16);
+
             panel.Controls.Add(label);
+
             flowLayoutPanel1.Controls.Add(panel);
             NextButton.Click -= NextButton_Click;
             NextButton.Click += (s,ev)=> {
