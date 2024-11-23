@@ -11,7 +11,7 @@ namespace PTestApp
             {4, "Мотивация персонала" },
             {5, "Системы компенсации и стимулирования персонала" },
             {6, "Управление проблемными сотрудниками" },
-            {7, "Развитие персонала" }
+            {7, "Создание эффективной команды. Развитие персонала" }
         };
 
 
@@ -39,7 +39,7 @@ namespace PTestApp
             {
                 var index = i;
                 var panel = new Panel();
-                panel.Size = new Size(300, 100);
+                panel.Size = new Size(320, 100);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
                 panel.Padding = new Padding(10);
@@ -56,7 +56,7 @@ namespace PTestApp
                 label.Font = new Font("Roboto",16);
                 label.AutoSize = false;
                 label.TextAlign = ContentAlignment.MiddleCenter;
-                label.Size = new Size(300, 100);
+                label.Size = new Size(320, 100);
 
                 label.Cursor = Cursors.Hand;
                 panel.Cursor = Cursors.Hand;
