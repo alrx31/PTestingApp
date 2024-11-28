@@ -45,7 +45,7 @@
             // 
             // NextButton
             // 
-            NextButton.Location = new Point(466, 388);
+            NextButton.Location = new Point(594, 566);
             NextButton.Name = "NextButton";
             NextButton.Size = new Size(284, 38);
             NextButton.TabIndex = 1;
@@ -56,14 +56,14 @@
             // 
             flowLayoutPanel1.Location = new Point(24, 120);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(764, 251);
+            flowLayoutPanel1.Size = new Size(764, 421);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // TestForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(890, 626);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(NextButton);
             Controls.Add(QuestionLabel);
