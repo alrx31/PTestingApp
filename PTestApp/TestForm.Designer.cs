@@ -56,7 +56,7 @@
             // 
             flowLayoutPanel1.Location = new Point(24, 120);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(764, 421);
+            flowLayoutPanel1.Size = new Size(833, 421);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // TestForm

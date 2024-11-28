@@ -12,6 +12,7 @@
             this.test = test;
             this.BackColor = Color.Beige;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.Text = test.Name;
         }
 
         private void TestForm_Load(object sender, EventArgs e)
@@ -87,7 +88,7 @@
             flowLayoutPanel1.Controls.Clear();
 
             var panel = new Panel();
-            panel.Size = new Size(800,200);
+            panel.Size = new Size(800,300);
             panel.AutoSize = true;
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(10);
@@ -97,7 +98,7 @@
             var label = new Label();
             label.Text = GetResult();
             label.AutoSize = false;
-            label.Size = new Size(800, 200);
+            label.Size = new Size(800, 300);
             label.Font = new Font("Roboto", 16);
 
             panel.Controls.Add(label);
