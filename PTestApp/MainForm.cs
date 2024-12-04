@@ -11,7 +11,7 @@ namespace PTestApp
             {4, "Мотивация персонала" },
             {5, "Системы компенсации и стимулирования персонала" },
             {6, "Управление проблемными сотрудниками" },
-            {7, "Создание эффективной команды. Развитие персонала" }
+            {7, "Создание эффективной команды" }
         };
 
 
@@ -97,7 +97,7 @@ namespace PTestApp
             foreach (var test in tests)
             {
                 var panel = new Panel();
-                panel.Size = new Size(300, 150);
+                panel.Size = new Size(300, 300);
                 panel.BorderStyle = BorderStyle.FixedSingle;
                 panel.Margin = new Padding(10);
                 panel.BackColor = Color.White;
@@ -105,7 +105,7 @@ namespace PTestApp
                 panel.BackColor = Color.Aquamarine;
                 var label = new Label() { Text = test.Name };
                 label.AutoSize = false;
-                label.Size = new Size(300, 150);
+                label.Size = new Size(300, 300);
                 label.Font = new Font("Roboto", 16);
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Click += (s, ev) =>
