@@ -76,7 +76,7 @@ namespace PTestApp
             var list1 = new List<Test>();
 
             // string folderPath = "Data";
-            string folderPath = "..\\..\\..\\Data";
+            string folderPath = "Data";
 
             string[] jsonFiles = Directory.GetFiles(folderPath, $"{indx}*.json");
 
